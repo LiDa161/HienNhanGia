@@ -40,6 +40,6 @@ public class player_atk : MonoBehaviour
         shoot.Normalize();
         var bullet_speed = Instantiate(bullet, fire_point.position, fire_point.rotation);
         bullet_speed.GetComponent<Rigidbody2D>().velocity = shoot * fire_force;
-        bullet_speed.transform.Rotate(0, 0, Mathf.Atan2(shoot.y, shoot.x) * Mathf.Rad2Deg + 90f);
+        bullet_speed.transform.Rotate(0, 0, Mathf.Atan2(shoot.y, shoot.x) * Mathf.Rad2Deg);
     }
 }
