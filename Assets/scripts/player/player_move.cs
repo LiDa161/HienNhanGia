@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
@@ -31,7 +31,7 @@ public class player_move : MonoBehaviour
     void Update()
     {
         player_ani();
-        speed = Math.Clamp(move_.magnitude, 0.0f, 1.0f);
+        speed = Math.Clamp(move_.magnitude, 0.0f, 1.0f);       
     }
 
     void FixedUpdate()
