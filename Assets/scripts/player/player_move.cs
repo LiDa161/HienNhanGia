@@ -15,7 +15,6 @@ public class player_move : MonoBehaviour
     [SerializeField] float speed_basic = 8f;
     SpriteRenderer sp;
     public Vector2 move_;
-    Vector2 mouse_position;
     int current;
     // Start is called before the first frame update
     void Start()
@@ -23,8 +22,8 @@ public class player_move : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
         sp = GetComponent<SpriteRenderer>();
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        /*Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;*/
     }
 
     // Update is called once per frame
