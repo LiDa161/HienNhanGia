@@ -10,7 +10,7 @@ public class player_atk : MonoBehaviour
     //[SerializeField] float fire_force = 10f;
     [SerializeField] float distance = 1f;
     player_move pl_movez;
-    Vector3 mouse_position;
+    public Vector3 mouse_position;
     [SerializeField] bool can_fire = true;
     float timer;
     [SerializeField] float time_between;
@@ -55,13 +55,13 @@ public class player_atk : MonoBehaviour
         }       
     }*/
 
-    void aim()
+    /*void aim()
     {
         if (pl_movez.move_ != Vector2.zero)
         {
             fire_point.localPosition = pl_movez.move_ * distance;
         }
-    }
+    }*/
 
     /*void fire()
     {
@@ -74,6 +74,6 @@ public class player_atk : MonoBehaviour
 
     void fire()
     {
-        var bullet_speed = Instantiate(bullet, fire_point.position, Quaternion.identity);
+        var bullet_speed = Instantiate(bullet, fire_point.position, fire_point.rotation);
     }
 }
