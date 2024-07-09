@@ -24,7 +24,7 @@ public class player_atk : MonoBehaviour
 
     void Update()
     {
-        mouse_position = camera.ScreenToWorldPoint(Input.mousePosition);
+        mouse_position =camera.ScreenToWorldPoint(Input.mousePosition);
         Vector3 rotation = mouse_position - transform.position;
         float angle = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angle);
