@@ -30,12 +30,7 @@ public class player_move : MonoBehaviour
     void Update()
     {
         player_ani();
-        speed = Math.Clamp(move_.magnitude, 0.0f, 1.0f); 
-        
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            Debug.Log("ok");
-        }
+        speed = Math.Clamp(move_.magnitude, 0.0f, 1.0f);        
     }
 
     void FixedUpdate()

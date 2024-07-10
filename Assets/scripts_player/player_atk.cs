@@ -8,10 +8,11 @@ using UnityEngine.UI;
 
 public class player_atk : MonoBehaviour
 {
+    [SerializeField] SpriteRenderer gun;
     [SerializeField] GameObject bullet;
     [SerializeField] Transform fire_point;
     //[SerializeField] float fire_force = 10f;
-    [SerializeField] float distance = 1f;
+    //[SerializeField] float distance = 1f;
     player_move pl_movez;
     Vector3 mouse_position;
     [SerializeField] bool can_fire = true;
@@ -28,6 +29,16 @@ public class player_atk : MonoBehaviour
         Vector2 rotation = mouse_position - transform.position;
         float angle = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angle);
+
+        if (angle > 90)
+        {
+            gun.flipY = true;
+        }
+        else
+        {
+            gun.flipY= false;   
+        }
+
         if (!can_fire)
         {
             timer += Time.deltaTime;

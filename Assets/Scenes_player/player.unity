@@ -849,9 +849,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76bbe509261b6f7499438d2ee5fcd132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gun: {fileID: 56885219}
   bullet: {fileID: 5325573346590834008, guid: 6ca5927af6c09b64ab53498d01ef11e1, type: 3}
   fire_point: {fileID: 56885218}
-  distance: 1
   can_fire: 1
   time_between: 0.3
 --- !u!1660057539 &9223372036854775807

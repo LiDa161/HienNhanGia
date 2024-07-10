@@ -26,8 +26,7 @@ public class bullet : MonoBehaviour
         {
             var name = collision.attachedRigidbody.name;
             Destroy(gameObject);
-            Destroy(GameObject.Find(name));
-            Debug.Log("done");
+            GameObject.Find(name).SetActive(false);
         }
     }
 
