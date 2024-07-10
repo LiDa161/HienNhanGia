@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
+using UnityEngine.UI;
 
 public class player_atk : MonoBehaviour
 {
@@ -10,22 +13,19 @@ public class player_atk : MonoBehaviour
     //[SerializeField] float fire_force = 10f;
     [SerializeField] float distance = 1f;
     player_move pl_movez;
-    public Vector3 mouse_position;
+    Vector3 mouse_position;
     [SerializeField] bool can_fire = true;
     float timer;
     [SerializeField] float time_between;
-    Camera camera;
-
     void Start()
     {
-        camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         pl_movez = GetComponent<player_move>();
     }
 
     void Update()
     {
-        mouse_position =camera.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 rotation = mouse_position - transform.position;
+        mouse_position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 rotation = mouse_position - transform.position;
         float angle = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angle);
         if (!can_fire)
@@ -42,17 +42,13 @@ public class player_atk : MonoBehaviour
             can_fire = false;
             fire();
         }
-        
+
         //aim();
     }
 
     /*void OnFire()
     {
-        if (can_fire)
-        {
-            can_fire = false;
-            fire();
-        }       
+        fire();
     }*/
 
     /*void aim()

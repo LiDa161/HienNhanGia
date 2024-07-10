@@ -32,7 +32,7 @@ public class player_move : MonoBehaviour
         player_ani();
         speed = Math.Clamp(move_.magnitude, 0.0f, 1.0f); 
         
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             Debug.Log("ok");
         }

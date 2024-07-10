@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 56885218}
   - component: {fileID: 56885219}
   m_Layer: 0
-  m_Name: fire_point
+  m_Name: fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -428,10 +428,10 @@ GameObject:
   - component: {fileID: 543300695}
   - component: {fileID: 543300694}
   - component: {fileID: 543300693}
-  - component: {fileID: 543300692}
   - component: {fileID: 543300691}
   - component: {fileID: 543300688}
-  - component: {fileID: 543300696}
+  - component: {fileID: 543300697}
+  - component: {fileID: 543300698}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -490,33 +490,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!50 &543300692
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 543300687}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!61 &543300693
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -622,7 +595,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 543300687}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -630,7 +603,34 @@ Transform:
   - {fileID: 2119335134}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &543300696
+--- !u!50 &543300697
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543300687}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &543300698
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -815,7 +815,7 @@ GameObject:
   - component: {fileID: 2119335134}
   - component: {fileID: 2119335135}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: fire_point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -852,7 +852,6 @@ MonoBehaviour:
   bullet: {fileID: 5325573346590834008, guid: 6ca5927af6c09b64ab53498d01ef11e1, type: 3}
   fire_point: {fileID: 56885218}
   distance: 1
-  mouse_position: {x: 0, y: 0, z: 0}
   can_fire: 1
   time_between: 0.3
 --- !u!1660057539 &9223372036854775807
