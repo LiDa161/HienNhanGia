@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bullet : MonoBehaviour
+public class bullet_player : MonoBehaviour
 {
     [SerializeField] float fire_force = 10f;
     Rigidbody2D rb;

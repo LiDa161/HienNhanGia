@@ -30,15 +30,17 @@ public class player_atk : MonoBehaviour
         float angle = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angle);
 
-        if (angle > 90)
+        if (rotation.y > 0)
         {
-            gun.flipY = true;
+            if (rotation.x > 0) gun.flipY = false;
+            if (rotation.x < 0) gun.flipY = true;
         }
-        else
+        else if (rotation.y < 0)
         {
-            gun.flipY= false;   
+            if (rotation.x < 0) gun.flipY = true;
+            if (rotation.x > 0) gun.flipY = false;
         }
-
+        
         if (!can_fire)
         {
             timer += Time.deltaTime;
