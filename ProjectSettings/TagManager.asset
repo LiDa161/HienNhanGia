@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - quai
+  - fire_point
+  - items
   layers:
   - Default
   - TransparentFX

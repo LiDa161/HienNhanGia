@@ -18,13 +18,15 @@ public class player_atk : MonoBehaviour
     [SerializeField] bool can_fire = true;
     float timer;
     [SerializeField] float time_between;
+    float timez;
+    [SerializeField] float defaultTimeBetween;
     void Start()
     {
         pl_movez = GetComponent<player_move>();
     }
 
     void Update()
-    {
+    {       
         mouse_position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 rotation = mouse_position - transform.position;
         float angle = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
@@ -84,5 +86,19 @@ public class player_atk : MonoBehaviour
     void fire()
     {
         var bullet_speed = Instantiate(bullet, fire_point.position, fire_point.rotation);
+    }
+
+    public void TangTocdoban(int sp, float x)
+    {
+        defaultTimeBetween = time_between;
+        time_between = sp;
+        timez = x;
+        StartCoroutine(delay());
+    }
+
+    IEnumerator delay()
+    {
+        yield return new WaitForSeconds(timez);
+        time_between = defaultTimeBetween;
     }
 }
