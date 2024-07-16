@@ -6,7 +6,8 @@ TagManager:
   tags:
   - quai
   - fire_point
-  - items
+  - power_up
+  - health
   layers:
   - Default
   - TransparentFX
