@@ -52,6 +52,7 @@ public class player_atk : MonoBehaviour
                 timer = 0;
             }
         }
+
         if (Input.GetMouseButtonDown(0) && can_fire)
         {
             can_fire = false;
