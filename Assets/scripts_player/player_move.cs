@@ -15,7 +15,7 @@ public class player_move : MonoBehaviour
     [SerializeField] float speed_basic = 8f;
     SpriteRenderer sp;
     public Vector2 move_;
-    int current;
+    int current;    
     // Start is called before the first frame update
     void Start()
     {
@@ -127,7 +127,6 @@ public class player_move : MonoBehaviour
                     break;
             }
         }*/
-
     }
 }
 
