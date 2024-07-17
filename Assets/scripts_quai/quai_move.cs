@@ -31,13 +31,19 @@ public class quai_move : MonoBehaviour
         {
             direction = (player.position - transform.position).normalized;
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            ani.SetFloat("speed_", speed);
         }
-        
-        /*if (direction != Vector2.zero)
+        else
+        {
+            ani.SetFloat("speed_", 0);
+        }
+
+        if (direction != Vector2.zero)
         {
             ani.SetFloat("x.velocity", direction.x);
             ani.SetFloat("y.velocity", direction.y);
-        }*/
+        }
+
     }
 
     void OnDrawGizmosSelected()
