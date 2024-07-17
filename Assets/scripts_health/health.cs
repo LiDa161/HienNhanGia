@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class health : MonoBehaviour
 {
+    [SerializeField] Image health_;
+    [SerializeField] TextMeshProUGUI value_text;
     public float max_health;
     public float current_health;
 
@@ -17,6 +21,12 @@ public class health : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void update_health()
+    {
+        health_.fillAmount = current_health / max_health;
+        value_text.text = current_health.ToString() + " / " + max_health.ToString();
     }
 
     public void tru_mau(float tru_mau)
