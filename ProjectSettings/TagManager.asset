@@ -8,6 +8,8 @@ TagManager:
   - fire_point
   - power_up
   - health
+  - bullet_player
+  - bullet_quai
   layers:
   - Default
   - TransparentFX

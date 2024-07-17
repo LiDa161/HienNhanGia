@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class health : MonoBehaviour
 {
-    [SerializeField] float max_health;
-    [SerializeField] float current_health;
+    public float max_health;
+    public float current_health;
 
     // Start is called before the first frame update
     void Start()
@@ -19,21 +19,18 @@ public class health : MonoBehaviour
         
     }
 
-    public void tru_mau(float c)
+    public void tru_mau(float tru_mau)
     {
-        current_health -= c;
-        print(current_health);
-        if (current_health <= 0)
-        {
-            gameObject.SetActive(false);
-        }
+        current_health -= tru_mau;
+        Debug.Log($"da tru : {tru_mau}");
+        Debug.Log($"luong hp con lai : {current_health}");
+        
     }
-
-    void OnCollisionEnter2D(Collision2D collision)
+    
+    public void tang_mau(float tang_mau)
     {
-        if (collision.gameObject.CompareTag("quai"))
-        {
-            tru_mau(20);
-        }
+        current_health += tang_mau;
+        Debug.Log($"da tang : {tang_mau}");
+        Debug.Log($"hp moi : {current_health}");
     }
 }

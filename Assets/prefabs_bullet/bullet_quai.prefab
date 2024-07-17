@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 147737680733018526}
   m_Layer: 0
   m_Name: bullet_quai
-  m_TagString: Untagged
+  m_TagString: bullet_quai
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

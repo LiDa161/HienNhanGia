@@ -7,9 +7,11 @@ public class bullet_quai : MonoBehaviour
     GameObject player;
     [SerializeField] float fire_force = 5f;
     Rigidbody2D rb;
+    health health;
     // Start is called before the first frame update
     void Start()
     {
+        health = GetComponent<health>();
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
 
@@ -26,5 +28,24 @@ public class bullet_quai : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            var name = collision.attachedRigidbody.name;
+            Destroy(gameObject);
+            health = collision.GetComponent<health>();
+            if (health != null)
+            {
+                health.tru_mau(20);
+                if (health.current_health <= 0)
+                {
+                    GameObject.Find(name).SetActive(false);
+                    Debug.Log($"da diet player");
+                }
+            }
+        }
     }
 }
