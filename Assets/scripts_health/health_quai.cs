@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class health : MonoBehaviour
+public class health_quai : MonoBehaviour
 {
-    [SerializeField] Image health_;
+
     [SerializeField] TextMeshProUGUI value_text;
     public float max_health;
     public float current_health;
@@ -15,13 +14,11 @@ public class health : MonoBehaviour
     void Start()
     {
         current_health = max_health;
-        update_health();
     }
 
-     public void update_health()
+    public void update_health()
     {
-        health_.fillAmount = current_health / max_health;
-        value_text.text = current_health.ToString() + " / " + max_health.ToString();
+        value_text.text = current_health.ToString();
     }
 
     public void tru_mau(float tru_mau)
@@ -29,14 +26,6 @@ public class health : MonoBehaviour
         current_health -= tru_mau;
         Debug.Log($"da tru : {tru_mau}");
         Debug.Log($"luong hp con lai : {current_health}");
-        update_health();
-    }
-    
-    public void tang_mau(float tang_mau)
-    {
-        current_health += tang_mau;
-        Debug.Log($"da tang : {tang_mau}");
-        Debug.Log($"hp moi : {current_health}");
         update_health();
     }
 }

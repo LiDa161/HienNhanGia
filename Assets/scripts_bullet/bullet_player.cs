@@ -6,11 +6,11 @@ public class bullet_player : MonoBehaviour
 {
     [SerializeField] float fire_force = 10f;
     Rigidbody2D rb;
-    health health;
+    health_quai health;
     // Start is called before the first frame update
     void Start()
     {
-        health = GetComponent<health>();
+        health = GetComponent<health_quai>();
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = transform.right * fire_force;        
         Destroy(gameObject, 1);
@@ -28,7 +28,7 @@ public class bullet_player : MonoBehaviour
         {
             var name = collision.attachedRigidbody.name;
             Destroy(gameObject);
-            health = collision.GetComponent<health>();
+            health = collision.GetComponent<health_quai>();
             if (health != null)
             {
                 health.tru_mau(20);
