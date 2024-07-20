@@ -1,0 +1,51 @@
+id	name 	description	sprite	type	rare
+1	Sword	A relic from a bygone era, this sword bears the weight of countless battles. Its edge is as sharp as the warrior's spirit, and its hilt is worn smooth by countless hands. 	1	1	2
+2	Axe	Imbued with ancient magic, this axe pulses with raw power. Its enchanted blade cleaves through flesh and stone with equal ease, leaving a trail of shimmering energy in its wake. 	2	1	2
+3	Dagger	Gleaming with an otherworldly light, this dagger is a symbol of elven craftsmanship. Its razor-sharp blade is coated with a potent poison, making it a deadly weapon in close combat. 	3	5	2
+4	Spear	Forged from the bones of a mighty dragon, this spear is a testament to the power of humanity. Its tip is as hard as dragon scales, and its shaft is strong enough to withstand the blows of even the most formidable foe. 	4	2	2
+5	Bow	Crafted from the finest yew wood, this bow is a marvel of precision. Its string sings with power as it releases arrows that fly with deadly accuracy. 	5	3	3
+6	Arrow	Fletched with feathers from a rare sunbird, this arrow is imbued with radiant energy. It pierces through darkness and shatters illusions, revealing the true nature of things. 	6	5	2
+7	Shield	Impenetrable to flame and claw, this shield is a symbol of unwavering defense. Its surface is adorned with intricate runes that deflect magical attacks. 	7	3	1
+8	Helmet	A relic from a bygone era, this sword bears the weight of countless battles. Its edge is as sharp as the warrior's spirit, and its hilt is worn smooth by countless hands. 	8	4	2
+9	Armor	Imbued with ancient magic, this axe pulses with raw power. Its enchanted blade cleaves through flesh and stone with equal ease, leaving a trail of shimmering energy in its wake. 	9	4	1
+10	Potion	Gleaming with an otherworldly light, this dagger is a symbol of elven craftsmanship. Its razor-sharp blade is coated with a potent poison, making it a deadly weapon in close combat. 	10	1	2
+11	Grenade	Forged from the bones of a mighty dragon, this spear is a testament to the power of humanity. Its tip is as hard as dragon scales, and its shaft is strong enough to withstand the blows of even the most formidable foe. 	11	4	1
+12	Rocket Launcher	Crafted from the finest yew wood, this bow is a marvel of precision. Its string sings with power as it releases arrows that fly with deadly accuracy. 	12	4	1
+13	Machine Gun	Fletched with feathers from a rare sunbird, this arrow is imbued with radiant energy. It pierces through darkness and shatters illusions, revealing the true nature of things. 	13	4	2
+14	Sniper Rifle	Impenetrable to flame and claw, this shield is a symbol of unwavering defense. Its surface is adorned with intricate runes that deflect magical attacks. 	14	5	1
+15	Shotgun	A relic from a bygone era, this sword bears the weight of countless battles. Its edge is as sharp as the warrior's spirit, and its hilt is worn smooth by countless hands. 	15	2	2
+16	Wood	Imbued with ancient magic, this axe pulses with raw power. Its enchanted blade cleaves through flesh and stone with equal ease, leaving a trail of shimmering energy in its wake. 	16	5	2
+17	Stone	Gleaming with an otherworldly light, this dagger is a symbol of elven craftsmanship. Its razor-sharp blade is coated with a potent poison, making it a deadly weapon in close combat. 	17	3	3
+18	Metal	Forged from the bones of a mighty dragon, this spear is a testament to the power of humanity. Its tip is as hard as dragon scales, and its shaft is strong enough to withstand the blows of even the most formidable foe. 	18	1	1
+19	Food	Crafted from the finest yew wood, this bow is a marvel of precision. Its string sings with power as it releases arrows that fly with deadly accuracy. 	19	1	1
+20	Water	Fletched with feathers from a rare sunbird, this arrow is imbued with radiant energy. It pierces through darkness and shatters illusions, revealing the true nature of things. 	20	1	2
+21	Seeds	Impenetrable to flame and claw, this shield is a symbol of unwavering defense. Its surface is adorned with intricate runes that deflect magical attacks. 	21	2	3
+22	Leather	A relic from a bygone era, this sword bears the weight of countless battles. Its edge is as sharp as the warrior's spirit, and its hilt is worn smooth by countless hands. 	22	2	1
+23	Cloth	Imbued with ancient magic, this axe pulses with raw power. Its enchanted blade cleaves through flesh and stone with equal ease, leaving a trail of shimmering energy in its wake. 	23	1	3
+24	Gems	Gleaming with an otherworldly light, this dagger is a symbol of elven craftsmanship. Its razor-sharp blade is coated with a potent poison, making it a deadly weapon in close combat. 	24	3	2
+25	Minerals	Forged from the bones of a mighty dragon, this spear is a testament to the power of humanity. Its tip is as hard as dragon scales, and its shaft is strong enough to withstand the blows of even the most formidable foe. 	25	4	2
+26	Coins	Crafted from the finest yew wood, this bow is a marvel of precision. Its string sings with power as it releases arrows that fly with deadly accuracy. 	26	4	3
+27	Crafting Tools	Fletched with feathers from a rare sunbird, this arrow is imbued with radiant energy. It pierces through darkness and shatters illusions, revealing the true nature of things. 	27	1	3
+28	Backpack	Impenetrable to flame and claw, this shield is a symbol of unwavering defense. Its surface is adorned with intricate runes that deflect magical attacks. 	28	1	3
+29	Map	A relic from a bygone era, this sword bears the weight of countless battles. Its edge is as sharp as the warrior's spirit, and its hilt is worn smooth by countless hands. 	29	1	1
+30	Compass	A relic from a bygone era, this sword bears the weight of countless battles. Its edge is as sharp as the warrior's spirit, and its hilt is worn smooth by countless hands. 	30	1	1
+31	Flashlight	Imbued with ancient magic, this axe pulses with raw power. Its enchanted blade cleaves through flesh and stone with equal ease, leaving a trail of shimmering energy in its wake. 	31	2	2
+32	Tent	Gleaming with an otherworldly light, this dagger is a symbol of elven craftsmanship. Its razor-sharp blade is coated with a potent poison, making it a deadly weapon in close combat. 	32	2	3
+33	Sleeping Bag	Forged from the bones of a mighty dragon, this spear is a testament to the power of humanity. Its tip is as hard as dragon scales, and its shaft is strong enough to withstand the blows of even the most formidable foe. 	33	1	2
+34	Rope	Crafted from the finest yew wood, this bow is a marvel of precision. Its string sings with power as it releases arrows that fly with deadly accuracy. 	34	2	3
+35	Grappling Hook	Fletched with feathers from a rare sunbird, this arrow is imbued with radiant energy. It pierces through darkness and shatters illusions, revealing the true nature of things. 	35	5	2
+36	Binoculars	Impenetrable to flame and claw, this shield is a symbol of unwavering defense. Its surface is adorned with intricate runes that deflect magical attacks. 	36	5	1
+37	Watch	A relic from a bygone era, this sword bears the weight of countless battles. Its edge is as sharp as the warrior's spirit, and its hilt is worn smooth by countless hands. 	37	4	3
+38	Jewelry	Imbued with ancient magic, this axe pulses with raw power. Its enchanted blade cleaves through flesh and stone with equal ease, leaving a trail of shimmering energy in its wake. 	38	1	3
+39	Clothing	Gleaming with an otherworldly light, this dagger is a symbol of elven craftsmanship. Its razor-sharp blade is coated with a potent poison, making it a deadly weapon in close combat. 	39	2	1
+40	Key	Forged from the bones of a mighty dragon, this spear is a testament to the power of humanity. Its tip is as hard as dragon scales, and its shaft is strong enough to withstand the blows of even the most formidable foe. 	40	4	2
+41	Treasure Chest	Crafted from the finest yew wood, this bow is a marvel of precision. Its string sings with power as it releases arrows that fly with deadly accuracy. 	41	1	1
+42	Gemstone	Fletched with feathers from a rare sunbird, this arrow is imbued with radiant energy. It pierces through darkness and shatters illusions, revealing the true nature of things. 	42	1	2
+43	Artifact	Impenetrable to flame and claw, this shield is a symbol of unwavering defense. Its surface is adorned with intricate runes that deflect magical attacks. 	43	3	2
+44	Trophy	A relic from a bygone era, this sword bears the weight of countless battles. Its edge is as sharp as the warrior's spirit, and its hilt is worn smooth by countless hands. 	44	3	3
+45	Achievement	Imbued with ancient magic, this axe pulses with raw power. Its enchanted blade cleaves through flesh and stone with equal ease, leaving a trail of shimmering energy in its wake. 	45	5	3
+46	Currency	Gleaming with an otherworldly light, this dagger is a symbol of elven craftsmanship. Its razor-sharp blade is coated with a potent poison, making it a deadly weapon in close combat. 	46	3	1
+47	Experience Points	Forged from the bones of a mighty dragon, this spear is a testament to the power of humanity. Its tip is as hard as dragon scales, and its shaft is strong enough to withstand the blows of even the most formidable foe. 	47	2	3
+48	Upgrade Materials	Crafted from the finest yew wood, this bow is a marvel of precision. Its string sings with power as it releases arrows that fly with deadly accuracy. 	48	1	1
+49	Unique Items	Fletched with feathers from a rare sunbird, this arrow is imbued with radiant energy. It pierces through darkness and shatters illusions, revealing the true nature of things. 	49	5	1
+50	Secret Item 	Impenetrable to flame and claw, this shield is a symbol of unwavering defense. Its surface is adorned with intricate runes that deflect magical attacks. 	50	5	2
