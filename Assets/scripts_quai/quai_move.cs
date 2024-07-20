@@ -33,6 +33,10 @@ public class quai_move : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
             ani.SetFloat("speed_", speed);
         }
+        else if (distance > radius)
+        {
+            Destroy(gameObject, 1f);
+        }
         else
         {
             ani.SetFloat("speed_", 0);
