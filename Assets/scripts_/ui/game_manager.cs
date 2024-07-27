@@ -6,7 +6,6 @@ using UnityEngine;
 public class game_manager : MonoBehaviour
 {
     public static game_manager instance;
-
     public character[] characters;
 
     public character current_character;

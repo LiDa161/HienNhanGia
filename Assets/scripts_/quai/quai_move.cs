@@ -9,6 +9,7 @@ public class quai_move : MonoBehaviour
     [SerializeField] float radius = 5f;   
     Vector2 direction;
     Animator ani;
+    
 
     // Start is called before the first frame update
     void Start()

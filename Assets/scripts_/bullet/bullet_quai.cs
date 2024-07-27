@@ -11,7 +11,6 @@ public class bullet_quai : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        health = GetComponent<health>();
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
 
