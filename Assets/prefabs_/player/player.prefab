@@ -891,6 +891,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed_basic: 8
   move_: {x: 0, y: 0}
+  dash_boost: 20
+  dash_time: 0.2
+  is_dashing: 0
 --- !u!114 &268649609265687095
 MonoBehaviour:
   m_ObjectHideFlags: 0

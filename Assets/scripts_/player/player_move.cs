@@ -15,7 +15,11 @@ public class player_move : MonoBehaviour
     [SerializeField] float speed_basic = 8f;
     SpriteRenderer sp;
     public Vector2 move_;
-    int current;    
+    int current;
+    [SerializeField] float dash_boost;
+    [SerializeField] float dash_time;
+    float dash_time_;
+    [SerializeField] bool is_dashing;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +34,23 @@ public class player_move : MonoBehaviour
     void Update()
     {
         player_ani();
-        speed = Math.Clamp(move_.magnitude, 0.0f, 1.0f);        
+        speed = Math.Clamp(move_.magnitude, 0.0f, 1.0f);  
+        if (Input.GetKeyDown(KeyCode.Space) && dash_time_ <= 0 && is_dashing == false)
+        {
+            speed_basic += dash_boost;
+            dash_time_ = dash_time;
+            is_dashing = true;
+        }
+        
+        if (dash_time_ <= 0 && is_dashing == true)
+        {
+            speed_basic -= dash_boost;
+            is_dashing = false;
+        }
+        else
+        {
+            dash_time_ -= Time.deltaTime;
+        }
     }
 
     void FixedUpdate()
