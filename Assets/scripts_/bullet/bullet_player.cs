@@ -10,7 +10,6 @@ public class bullet_player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        health = GetComponent<health_quai>();
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = transform.right * fire_force;        
         Destroy(gameObject, 1);

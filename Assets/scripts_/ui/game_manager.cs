@@ -10,7 +10,7 @@ public class game_manager : MonoBehaviour
 
     public character current_character;
 
-    private void Awake()
+    void Awake()
     {
         if (instance == null)
         {
@@ -24,7 +24,7 @@ public class game_manager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    private void Start()
+    void Start()
     {
         if (characters.Length > 0)
         {
