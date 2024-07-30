@@ -7,6 +7,7 @@ public class bullet_player : MonoBehaviour
     [SerializeField] float fire_force = 10f;
     Rigidbody2D rb;
     health_quai health;
+    int count = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +34,7 @@ public class bullet_player : MonoBehaviour
                 health.tru_mau(20);
                 if (health.current_health <= 0)
                 {
+                    game_manager.instance.set_text(count);
                     GameObject.Find(name).SetActive(false);
                     Debug.Log($"da diet quai");
                 }
