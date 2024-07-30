@@ -745,10 +745,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characters:
-  - prefab: {fileID: 7114166682592024912, guid: 86c4906a6b0f9c24b89388d1ed30014a, type: 3}
+  - prefab: {fileID: 6698454405546562241, guid: 86c4906a6b0f9c24b89388d1ed30014a, type: 3}
     name: player 1
     icon: {fileID: 21300000, guid: a32d135d78a3f2d449bf0426f1fac9f6, type: 3}
-  - prefab: {fileID: 7114166682592024912, guid: 86c4906a6b0f9c24b89388d1ed30014a, type: 3}
+  - prefab: {fileID: 6698454405546562241, guid: 86c4906a6b0f9c24b89388d1ed30014a, type: 3}
     name: player 2
     icon: {fileID: 21300000, guid: 8a588326e5bd0c349a7eb319617445cd, type: 3}
   current_character:

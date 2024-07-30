@@ -20,6 +20,10 @@ public class player_move : MonoBehaviour
     [SerializeField] float dash_time;
     float dash_time_;
     [SerializeField] bool is_dashing;
+    [SerializeField] GameObject ghost_dash;
+    [SerializeField] float ghost_delay;
+    Coroutine coroutine_ghost;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,12 +44,14 @@ public class player_move : MonoBehaviour
             speed_basic += dash_boost;
             dash_time_ = dash_time;
             is_dashing = true;
+            start_ghost();
         }
         
         if (dash_time_ <= 0 && is_dashing == true)
         {
             speed_basic -= dash_boost;
             is_dashing = false;
+            stop_ghost();
         }
         else
         {
@@ -71,82 +77,38 @@ public class player_move : MonoBehaviour
             ani.SetFloat("velocity.x", move_.x);
             ani.SetFloat("velocity.y", move_.y);
         }
-        ani.SetFloat("speed", speed);
-        /*if (rb.velocity.sqrMagnitude > 0)
+        ani.SetFloat("speed", speed);       
+    }
+
+    void stop_ghost()
+    {
+        if (coroutine_ghost != null)
         {
-            if(move_.x > 0 && move_.y == 0)
-            {
-                ani.Play("run_e");
-                current = 1;
-            }
-            else if (move_.x > 0 && move_.y > 0)
-            {
-                ani.Play("run_ne");
-                current = 2;
-            }
-            else if (move_.x > 0 && move_.y < 0)
-            {
-                ani.Play("run_se");
-                current = 3;
-            }
-            else if (move_.x < 0 && move_.y == 0)
-            {
-                ani.Play("run_w");
-                current = 4;
-            }
-            else if (move_.x < 0 && move_.y > 0)
-            {
-                ani.Play("run_nw");
-                current = 5;
-            }
-            else if (move_.x < 0 && move_.y < 0)
-            {
-                ani.Play("run_sw");
-                current = 6;
-            }
-            else if (move_.x == 0 && move_.y > 0)
-            {
-                ani.Play("run_n");
-                current = 7;
-            }
-            else if (move_.x == 0 && move_.y < 0)
-            {
-                ani.Play("run_s");
-                current = 8;
-            }
+            StopCoroutine(coroutine_ghost);
         }
-        else
+    }
+
+    void start_ghost()
+    {
+        if (coroutine_ghost != null)
         {
-            switch (current)
-            {
-                case 1:
-                    ani.Play("idle_e");
-                    break;
-                case 2:
-                    ani.Play("idle_ne");
-                    break;
-                case 3:
-                    ani.Play("idle_se");
-                    break;
+            StopCoroutine(coroutine_ghost);
+        }
+        coroutine_ghost = StartCoroutine(ghost_dash_());
+    }
 
-                case 4:
-                    ani.Play("idle_w");
-                    break;
-                case 5:
-                    ani.Play("idle_nw");
-                    break;
-                case 6:
-                    ani.Play("idle_sw");
-                    break;
+    IEnumerator ghost_dash_()
+    {
+        while (true)
+        {
+            var ghost = Instantiate(ghost_dash, transform.position, transform.rotation);
+            Sprite current_sp = sp.sprite;
+            ghost.GetComponent<SpriteRenderer>().sprite = current_sp;
 
-                case 7:
-                    ani.Play("idle_n");
-                    break;
-                case 8:
-                    ani.Play("idle_s");
-                    break;
-            }
-        }*/
+            Destroy(ghost, 0.5f);
+            yield return new WaitForSeconds(ghost_delay);
+
+        }
     }
 }
 

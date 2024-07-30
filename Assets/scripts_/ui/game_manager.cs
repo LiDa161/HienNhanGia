@@ -37,7 +37,10 @@ public class game_manager : MonoBehaviour
             current_character = characters[0];
         }
 
-        canvasController.instance.textMeshProUGUI.text = $"score : {score_}";
+        if (canvasController.instance != null)
+        {
+            canvasController.instance.textMeshProUGUI.text = $"score : {score_}";
+        }
     }
 
     public void SetCharacter(character character)
