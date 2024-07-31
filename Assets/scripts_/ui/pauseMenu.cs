@@ -12,9 +12,9 @@ public class pauseMenu : MonoBehaviour
         PauseMenu.SetActive(true);
         Time.timeScale = 0;
     }
-    public void Menu()
+    public void Menu(string name)
     {
-        SceneManager.LoadSceneAsync(0);
+        SceneManager.LoadSceneAsync(name);
         Time.timeScale = 1;
     }
     public void Restart()
