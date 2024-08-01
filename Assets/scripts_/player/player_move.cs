@@ -94,9 +94,8 @@ public class player_move : MonoBehaviour
         if (coroutine_ghost != null)
         {
             StopCoroutine(coroutine_ghost);
-        }
+        }        
         coroutine_ghost = StartCoroutine(ghost_dash_());
-       // return (true);
     }
 
     IEnumerator ghost_dash_()
@@ -118,11 +117,11 @@ public class player_move : MonoBehaviour
             Destroy(ghost, 0.5f);
             yield return new WaitForSeconds(ghost_delay);
         }
-        //yield return start_ghost();
     }
 
     public void tang_speed(float sp, float time_)
     {
+        Debug.Log($"Tăng speed từ {speed_basic} lên {sp} trong {time_} giây");
         default_speed = speed_basic;
         speed_basic = sp;
         time = time_;
@@ -133,6 +132,7 @@ public class player_move : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         speed_basic = default_speed;
+        Debug.Log($"Trở về speed cơ bản: {speed_basic}");
     }
 }
 

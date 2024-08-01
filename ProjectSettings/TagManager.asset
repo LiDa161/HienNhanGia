@@ -6,10 +6,13 @@ TagManager:
   tags:
   - quai
   - fire_point
-  - power_up
-  - health
   - bullet_player
   - bullet_quai
+  - bullet
+  - up_rate_fire
+  - up_health
+  - up_speed
+  - health
   layers:
   - Default
   - TransparentFX
