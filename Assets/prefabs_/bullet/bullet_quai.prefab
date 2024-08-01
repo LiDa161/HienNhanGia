@@ -162,3 +162,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fire_force: 5
+  min_damage: 5
+  max_damage: 11

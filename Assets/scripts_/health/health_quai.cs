@@ -14,9 +14,10 @@ public class health_quai : MonoBehaviour
         current_health = max_health;
     }
     
-    public void tru_mau(float tru_mau)
+    public void tru_mau(int tru_mau)
     {
         current_health -= tru_mau;
+        current_health = Mathf.Clamp(current_health, 0f, max_health);
         Debug.Log($"da tru : {tru_mau}");
         Debug.Log($"luong hp con lai : {current_health}");
     }

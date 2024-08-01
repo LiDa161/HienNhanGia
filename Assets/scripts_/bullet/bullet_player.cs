@@ -7,7 +7,8 @@ public class bullet_player : MonoBehaviour
     [SerializeField] float fire_force = 10f;
     Rigidbody2D rb;
     health_quai health;
-    int count = 1;
+    [SerializeField] int min_damage, max_damage;
+    [SerializeField] int count;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +32,8 @@ public class bullet_player : MonoBehaviour
             health = collision.GetComponent<health_quai>();
             if (health != null)
             {
-                health.tru_mau(20);
+                var damage = Random.Range(min_damage, max_damage);
+                health.tru_mau(damage);
                 if (health.current_health <= 0)
                 {
                     game_manager.instance.set_text(count);

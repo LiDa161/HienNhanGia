@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7703008042737691299}
   - component: {fileID: 386274916866387626}
   m_Layer: 0
-  m_Name: bullet_
+  m_Name: bullet_player
   m_TagString: bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,3 +162,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fire_force: 10
+  min_damage: 8
+  max_damage: 21
+  count: 2

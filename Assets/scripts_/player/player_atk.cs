@@ -20,6 +20,7 @@ public class player_atk : MonoBehaviour
     [SerializeField] float time_between;
     float timez;
     [SerializeField] float defaultTimeBetween;
+
     void Start()
     {
         pl_movez = GetComponent<player_move>();

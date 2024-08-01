@@ -8,6 +8,7 @@ public class bullet_quai : MonoBehaviour
     [SerializeField] float fire_force = 5f;
     Rigidbody2D rb;
     health health;
+    [SerializeField] int min_damage, max_damage;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +39,8 @@ public class bullet_quai : MonoBehaviour
             health = collision.GetComponent<health>();
             if (health != null)
             {
-                health.tru_mau(20);
+                var damage = Random.Range(min_damage, max_damage);
+                health.tru_mau(damage);
                 if (health.current_health <= 0)
                 {
                     GameObject.Find(name).SetActive(false);

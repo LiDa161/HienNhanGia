@@ -28,7 +28,7 @@ public class health : MonoBehaviour
         value_text.text = current_health.ToString() + " / " + max_health.ToString();
     }
 
-    public void tru_mau(float tru_mau)
+    public void tru_mau(int tru_mau)
     {
         current_health -= tru_mau;
         current_health = Mathf.Clamp(current_health, 0f, max_health);
@@ -37,7 +37,7 @@ public class health : MonoBehaviour
         update_health();
     }
     
-    public void tang_mau(float tang_mau)
+    public void tang_mau(int tang_mau)
     {
         current_health += tang_mau;
         current_health = Mathf.Clamp(current_health, 0f, max_health);
