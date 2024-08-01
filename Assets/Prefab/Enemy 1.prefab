@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7928861442078689580}
   - component: {fileID: 6743659093482189771}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 1313383815137376304}
   - component: {fileID: 2365493425962375435}
   - component: {fileID: 3451457020781913899}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy 1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -270,6 +270,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  health: 0
+  maxHealth: 10
+  animCon: []
   target: {fileID: 0}
 --- !u!114 &3451457020781913899
 MonoBehaviour:
