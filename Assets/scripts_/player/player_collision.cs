@@ -9,23 +9,28 @@ public class player_collision : MonoBehaviour
     player_move player_Move;
     [SerializeField] int min_health, max_health;
 
+    void Start()
+    {
+        player_Atk = GetComponentInChildren<player_atk>();
+        Health = GetComponent<health>();
+        player_Move = GetComponent<player_move>();        
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("up_rate_fire"))
         {
-            print($"va cham voi : {collision}");
-            player_Atk = collision.GetComponentInChildren<player_atk>();
+            print($"va cham voi : {collision.name}");
             if (player_Atk != null)
             {
-                player_Atk.TangTocdoban(0, 5f);
+                player_Atk.tang_toc_do_ban(0, 5f);
             }
             Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.CompareTag("up_health"))
         {
-            print($"va cham voi : {collision}");
-            Health = collision.GetComponent<health>();
+            print($"va cham voi : {collision.name}");
             if (Health != null)
             {
                 var healing = Random.Range(min_health, max_health);
@@ -36,8 +41,7 @@ public class player_collision : MonoBehaviour
 
         if (collision.gameObject.CompareTag("up_speed"))
         {
-            print($"va cham voi : {collision}");
-            player_Move = collision.GetComponent<player_move>();
+            print($"va cham voi : {collision.name}");
             if (player_Move != null)
             {
                 player_Move.tang_speed(16, 3);

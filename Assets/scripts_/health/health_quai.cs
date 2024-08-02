@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class health_quai : MonoBehaviour
 {
-    public float max_health;
-    public float current_health;
+    public float max_health, current_health;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +17,7 @@ public class health_quai : MonoBehaviour
     {
         current_health -= tru_mau;
         current_health = Mathf.Clamp(current_health, 0f, max_health);
-        Debug.Log($"da tru : {tru_mau}");
-        Debug.Log($"luong hp con lai : {current_health}");
+        Debug.Log($"da tru : {tru_mau} hp");
+        Debug.Log($"luong hp con lai : {current_health} hp");
     }
 }

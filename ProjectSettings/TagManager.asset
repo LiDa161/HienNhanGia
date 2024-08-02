@@ -13,6 +13,10 @@ TagManager:
   - up_health
   - up_speed
   - health
+  - 1
+  - 2
+  - 3
+  - hop_bi_an
   layers:
   - Default
   - TransparentFX

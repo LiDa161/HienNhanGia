@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class map_pos : MonoBehaviour
 {
-    [SerializeField] Vector2 cam_pos;
-    [SerializeField] Vector2 dir;
+    [SerializeField] Vector2 cam_pos, dir;
     
     // Start is called before the first frame update
     void Start()

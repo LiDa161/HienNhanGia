@@ -5,9 +5,9 @@ using UnityEngine;
 public class bullet_quai : MonoBehaviour
 {
     GameObject player;
-    [SerializeField] float fire_force = 5f;
     Rigidbody2D rb;
     health health;
+    [SerializeField] float fire_force = 5f;
     [SerializeField] int min_damage, max_damage;
     // Start is called before the first frame update
     void Start()

@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class bullet_player : MonoBehaviour
 {
-    [SerializeField] float fire_force = 10f;
     Rigidbody2D rb;
     health_quai health;
-    [SerializeField] int min_damage, max_damage;
+    [SerializeField] float fire_force = 10f;
+    [SerializeField] int min_damage, max_damage/*, count*/;
     [SerializeField] int count;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +36,7 @@ public class bullet_player : MonoBehaviour
                 var damage = Random.Range(min_damage, max_damage);
                 health.tru_mau(damage);
                 if (health.current_health <= 0)
-                {
+                {                   
                     game_manager.instance.set_text(count);
                     GameObject.Find(name).SetActive(false);
                     Debug.Log($"da diet quai");

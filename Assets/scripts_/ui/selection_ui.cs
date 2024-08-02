@@ -7,9 +7,7 @@ using UnityEngine.UI;
 public class selection_ui : MonoBehaviour
 {
     public GameObject option;
-
-    public Transform normal_character;
-    public Transform selected_character;
+    public Transform normal_character, selected_character;
 
     private void Start()
     {

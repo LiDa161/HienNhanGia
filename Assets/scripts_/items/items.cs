@@ -17,7 +17,7 @@ public class items : MonoBehaviour
             player_Atk = collision.GetComponentInChildren<player_atk>();
             if (player_Atk != null)
             {
-                player_Atk.TangTocdoban(0, 5f);
+                player_Atk.tang_toc_do_ban(0, 5f);
             }
             Destroy(gameObject);
 

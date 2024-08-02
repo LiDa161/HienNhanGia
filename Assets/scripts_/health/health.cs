@@ -8,11 +8,10 @@ using UnityEngine.UI;
 
 public class health : MonoBehaviour
 {
+    public float max_health, current_health;
     [SerializeField] Image health_;
     [SerializeField] TextMeshProUGUI value_text;
     [SerializeField] float fill_speed;
-    public float max_health;
-    public float current_health;
 
     // Start is called before the first frame update
     void Start()
@@ -32,8 +31,8 @@ public class health : MonoBehaviour
     {
         current_health -= tru_mau;
         current_health = Mathf.Clamp(current_health, 0f, max_health);
-        Debug.Log($"da tru : {tru_mau}");
-        Debug.Log($"luong hp con lai : {current_health}");
+        Debug.Log($"da tru : {tru_mau} hp");
+        Debug.Log($"luong hp con lai : {current_health} hp");
         update_health();
     }
     
@@ -41,8 +40,8 @@ public class health : MonoBehaviour
     {
         current_health += tang_mau;
         current_health = Mathf.Clamp(current_health, 0f, max_health);
-        Debug.Log($"da tang : {tang_mau}");
-        Debug.Log($"hp moi : {current_health}");
+        Debug.Log($"da tang : {tang_mau} hp");
+        Debug.Log($"hp moi : {current_health} hp");
         update_health();
     }
 }
