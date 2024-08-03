@@ -7,9 +7,7 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
     public TextMeshProUGUI scoretext;
-
-    
-    
+   
     // Start is called before the first frame update
     void Awake()
     {

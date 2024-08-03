@@ -3,7 +3,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
 
 public class health : MonoBehaviour
@@ -20,19 +22,24 @@ public class health : MonoBehaviour
         update_health();
     }
 
-     public void update_health()
+    private void Update()
+    {
+        
+    }
+
+    public void update_health()
     {
         float health_bar = current_health / max_health;
         health_.DOFillAmount(health_bar, fill_speed);
-        value_text.text = current_health.ToString() + " / " + max_health.ToString();
+        value_text.text = $"{current_health.ToString()} / {max_health.ToString()}";
     }
 
     public void tru_mau(int tru_mau)
-    {
+    {               
         current_health -= tru_mau;
         current_health = Mathf.Clamp(current_health, 0f, max_health);
-        Debug.Log($"da tru : {tru_mau} hp");
-        Debug.Log($"luong hp con lai : {current_health} hp");
+        Debug.Log($"-{tru_mau}hp");
+        Debug.Log($"con lai : {current_health}hp");
         update_health();
     }
     
@@ -40,8 +47,9 @@ public class health : MonoBehaviour
     {
         current_health += tang_mau;
         current_health = Mathf.Clamp(current_health, 0f, max_health);
-        Debug.Log($"da tang : {tang_mau} hp");
-        Debug.Log($"hp moi : {current_health} hp");
+        Debug.Log($"+{tang_mau}hp");
+        Debug.Log($"hp moi : {current_health}");
         update_health();
     }
+  
 }

@@ -164,3 +164,4 @@ MonoBehaviour:
   fire_force: 5
   min_damage: 5
   max_damage: 11
+  damage_text: {fileID: 4269216613586315643, guid: 80ff65b2c3389c349bd88fa3d0e3307c, type: 3}

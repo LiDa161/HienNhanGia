@@ -155,7 +155,7 @@ MonoBehaviour:
   - prefab: {fileID: 738293081360093442, guid: 86c4906a6b0f9c24b89388d1ed30014a, type: 3}
     name: player 1
     icon: {fileID: 21300000, guid: a32d135d78a3f2d449bf0426f1fac9f6, type: 3}
-  - prefab: {fileID: 738293081360093442, guid: 86c4906a6b0f9c24b89388d1ed30014a, type: 3}
+  - prefab: {fileID: 787835606871189544, guid: b11de68a3c4719745a412ceafcc5c46d, type: 3}
     name: player 2
     icon: {fileID: 21300000, guid: 8a588326e5bd0c349a7eb319617445cd, type: 3}
   current_character:
@@ -507,7 +507,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!156049354 &739271015
 Grid:
   m_ObjectHideFlags: 0
@@ -14556,7 +14556,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1881431342
 MonoBehaviour:
   m_ObjectHideFlags: 0
