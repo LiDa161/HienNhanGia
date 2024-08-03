@@ -165,7 +165,7 @@ MonoBehaviour:
   fire_force: 10
   min_damage: 8
   max_damage: 21
-  count: 1
+  count: 2
 --- !u!95 &8259129246022211364
 Animator:
   serializedVersion: 5

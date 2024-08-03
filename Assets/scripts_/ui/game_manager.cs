@@ -11,7 +11,7 @@ public class game_manager : MonoBehaviour
     public static game_manager instance;
     public character[] characters;
     public character current_character;
-    public TextMeshProUGUI textMeshProUGUI;
+    //public TextMeshProUGUI textMeshProUGUI;
 
     void Awake()
     {
@@ -37,10 +37,7 @@ public class game_manager : MonoBehaviour
             current_character = characters[0];
         }
 
-        /*if (textMeshProUGUI != null)
-        {*/
-            textMeshProUGUI.text = $"score : {score_}";
-        //}
+        UIManager.Instance.setText($"score : {score_}");
     }
 
     public void SetCharacter(character character)
@@ -57,6 +54,6 @@ public class game_manager : MonoBehaviour
             PlayerPrefs.SetInt("highscore", Highscore);
             Debug.Log($"da luu : {Highscore} ");
         }
-        textMeshProUGUI.text = $"score : {score_}";
+        UIManager.Instance.setText($"score : {score_}");
     }
 }

@@ -109,13 +109,13 @@ public class player_atk : MonoBehaviour
     {       
         if (collision.CompareTag("hop_bi_an"))
         {
-            random();
+            random_weapon();
             collision.gameObject.SetActive(false);
         }
     }
 
-    void random()
-    {       
+    void random_weapon()
+    {
         var random_weapons = weapons[Random.Range(0, weapons.Count)];
 
         if (current_weapon == random_weapons)
@@ -134,12 +134,14 @@ public class player_atk : MonoBehaviour
         else
         {
             return;
+            
         }
     }
 
     [System.Serializable]
     public class Weapon
     {
+        public int id;
         public GameObject weapon_opject;
         public Sprite weapon_sprite;
     }
