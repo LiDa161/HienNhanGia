@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class quai_move : MonoBehaviour
 {
-    [SerializeField] float speed = 2f;
-    Transform player;
-    [SerializeField] float radius = 5f;   
     Vector2 direction;
     Animator ani;
+    Transform player;
+    [SerializeField] float speed = 2f, radius = 5f; 
     
 
     // Start is called before the first frame update

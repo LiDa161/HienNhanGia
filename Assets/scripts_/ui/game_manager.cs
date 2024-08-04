@@ -6,18 +6,17 @@ using UnityEngine;
 
 public class game_manager : MonoBehaviour
 {
-    public static game_manager instance;
-
-    public character[] characters;
-    public character current_character;
-
     int score_ = 0;
     int Highscore = 0;
+    public static game_manager instance;
+    public character[] characters;
+    public character current_character;
 
     void Awake()
     {
         Highscore = PlayerPrefs.GetInt("highscore");
         Debug.Log(Highscore);
+
         if (instance == null)
         {
             instance = this;
@@ -37,10 +36,7 @@ public class game_manager : MonoBehaviour
             current_character = characters[0];
         }
 
-        if (canvasController.instance != null)
-        {
-            canvasController.instance.textMeshProUGUI.text = $"score : {score_}";
-        }
+        UIManager.Instance.setText($"score : {score_}");
     }
 
     public void SetCharacter(character character)
@@ -57,6 +53,6 @@ public class game_manager : MonoBehaviour
             PlayerPrefs.SetInt("highscore", Highscore);
             Debug.Log($"da luu : {Highscore} ");
         }
-        canvasController.instance.textMeshProUGUI.text = $"score : {score_}";
+        UIManager.Instance.setText($"score : {score_}");
     }
 }

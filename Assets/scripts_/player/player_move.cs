@@ -11,20 +11,13 @@ public class player_move : MonoBehaviour
 {
     Rigidbody2D rb;
     Animator ani;
-    float speed;
-    [SerializeField] float speed_basic = 8f;
+    float speed, dash_time_, time;
     SpriteRenderer sp;
     public Vector2 move_;
-    int current;
-    [SerializeField] float dash_boost;
-    [SerializeField] float dash_time;
-    float dash_time_;
+    Coroutine coroutine_ghost;
+    [SerializeField] float speed_basic = 8f, dash_boost, dash_time, ghost_delay, default_speed;
     [SerializeField] bool is_dashing;
     [SerializeField] GameObject ghost_dash;
-    [SerializeField] float ghost_delay;
-    Coroutine coroutine_ghost;
-    [SerializeField] float default_speed;
-    float time;
 
     // Start is called before the first frame update
     void Start()
@@ -121,7 +114,7 @@ public class player_move : MonoBehaviour
 
     public void tang_speed(float sp, float time_)
     {
-        Debug.Log($"Tăng speed từ {speed_basic} lên {sp} trong {time_} giây");
+        Debug.Log($"tang speed tu : {speed_basic} len {sp} trong {time_}s");
         default_speed = speed_basic;
         speed_basic = sp;
         time = time_;
@@ -132,7 +125,7 @@ public class player_move : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         speed_basic = default_speed;
-        Debug.Log($"Trở về speed cơ bản: {speed_basic}");
+        print("het time");
     }
 }
 
