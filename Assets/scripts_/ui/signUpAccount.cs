@@ -8,7 +8,12 @@ public class signUpAccount : MonoBehaviour
 {
     public TMP_InputField username;
     public TMP_InputField password;
-    public TextMeshPro thongbao;
+    public TextMeshProUGUI thongbao;
+
+    public void DangKyButton()
+    {
+        StartCoroutine(DangKy());
+    }
 
     IEnumerator DangKy()
     {
