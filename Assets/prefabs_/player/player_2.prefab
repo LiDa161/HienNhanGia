@@ -338,6 +338,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cea9d107507797c4196c5bc963ec2636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weapons:
+  - weapon_opject: {fileID: 8050162394450483178}
+    weapon_sprite: {fileID: -489677173, guid: 7f35d64412d549b4797a2a824a01eee3, type: 3}
+  - weapon_opject: {fileID: 5565271769291274276}
+    weapon_sprite: {fileID: 1986581099, guid: 7f35d64412d549b4797a2a824a01eee3, type: 3}
+  - weapon_opject: {fileID: 4393371021500664830}
+    weapon_sprite: {fileID: -1465075855, guid: 7f35d64412d549b4797a2a824a01eee3, type: 3}
   min_health: 5
   max_health: 11
 --- !u!1 &825488183013264574
@@ -1215,8 +1222,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8003115571129651294}
-  - component: {fileID: 5821697212110240325}
   - component: {fileID: 7239041251019675417}
+  - component: {fileID: 2880065048033680504}
   m_Layer: 0
   m_Name: weapons
   m_TagString: fire_point
@@ -1242,30 +1249,6 @@ Transform:
   - {fileID: 3701314674892085536}
   m_Father: {fileID: 2843814229004760560}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5821697212110240325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8422216021242102666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76bbe509261b6f7499438d2ee5fcd132, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 5325573346590834008, guid: 6ca5927af6c09b64ab53498d01ef11e1, type: 3}
-  fire_point: {fileID: 3578661732766035010}
-  can_fire: 1
-  time_between: 0.5
-  defaultTimeBetween: 0
-  weapons:
-  - weapon_opject: {fileID: 8050162394450483178}
-    weapon_sprite: {fileID: -489677173, guid: 7f35d64412d549b4797a2a824a01eee3, type: 3}
-  - weapon_opject: {fileID: 5565271769291274276}
-    weapon_sprite: {fileID: 1986581099, guid: 7f35d64412d549b4797a2a824a01eee3, type: 3}
-  - weapon_opject: {fileID: 4393371021500664830}
-    weapon_sprite: {fileID: -1465075855, guid: 7f35d64412d549b4797a2a824a01eee3, type: 3}
 --- !u!61 &7239041251019675417
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1311,6 +1294,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2880065048033680504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8422216021242102666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76bbe509261b6f7499438d2ee5fcd132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotation: {x: 0, y: 0}
+  bullet: {fileID: 5325573346590834008, guid: 6ca5927af6c09b64ab53498d01ef11e1, type: 3}
+  fire_point: {fileID: 3578661732766035010}
+  can_fire: 1
+  time_between: 0.5
+  defaultTimeBetween: 0
 --- !u!1 &8471865931029603907
 GameObject:
   m_ObjectHideFlags: 0

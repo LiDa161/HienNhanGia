@@ -6,7 +6,7 @@ public class bullet_player : MonoBehaviour
 {
     Rigidbody2D rb;
     health_quai health;
-    [SerializeField] float fire_force = 10f;
+    [SerializeField] float fire_force;
     [SerializeField] int min_damage, max_damage;
     [SerializeField] int count;
 

@@ -7,8 +7,7 @@ public class spawn_quai : MonoBehaviour
     float timer;
     GameObject quai_;
     [SerializeField] GameObject quai;
-    [SerializeField] float min_time;
-    [SerializeField] float max_time;
+    [SerializeField] float min_time, max_time;
     // Start is called before the first frame update
     void Start()
     {

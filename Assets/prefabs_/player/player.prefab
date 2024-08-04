@@ -266,6 +266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cea9d107507797c4196c5bc963ec2636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weapons: []
   min_health: 5
   max_health: 11
 --- !u!1 &1197955128599305657
@@ -861,8 +862,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7523226695620627891}
-  - component: {fileID: 871218880509503613}
   - component: {fileID: 6928287981471725844}
+  - component: {fileID: 3961110415085123204}
   m_Layer: 0
   m_Name: weapons
   m_TagString: fire_point
@@ -888,30 +889,6 @@ Transform:
   - {fileID: 4772909850316709101}
   m_Father: {fileID: 5459681213618580055}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &871218880509503613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6383354986773935502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76bbe509261b6f7499438d2ee5fcd132, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 5325573346590834008, guid: 6ca5927af6c09b64ab53498d01ef11e1, type: 3}
-  fire_point: {fileID: 5094793214391991582}
-  can_fire: 1
-  time_between: 0.5
-  defaultTimeBetween: 0
-  weapons:
-  - weapon_opject: {fileID: 1197955128599305657}
-    weapon_sprite: {fileID: -489677173, guid: 7f35d64412d549b4797a2a824a01eee3, type: 3}
-  - weapon_opject: {fileID: 8029896643658459651}
-    weapon_sprite: {fileID: 1986581099, guid: 7f35d64412d549b4797a2a824a01eee3, type: 3}
-  - weapon_opject: {fileID: 8580437509652702311}
-    weapon_sprite: {fileID: -1465075855, guid: 7f35d64412d549b4797a2a824a01eee3, type: 3}
 --- !u!61 &6928287981471725844
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -957,6 +934,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &3961110415085123204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6383354986773935502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76bbe509261b6f7499438d2ee5fcd132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotation: {x: 0, y: 0}
+  bullet: {fileID: 5325573346590834008, guid: 6ca5927af6c09b64ab53498d01ef11e1, type: 3}
+  fire_point: {fileID: 5094793214391991582}
+  can_fire: 1
+  time_between: 0.5
+  defaultTimeBetween: 0
 --- !u!1 &6452147327225942536
 GameObject:
   m_ObjectHideFlags: 0
