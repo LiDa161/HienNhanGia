@@ -4,56 +4,47 @@ using UnityEngine;
 
 public class quai_move : MonoBehaviour
 {
-    Vector2 direction;
+    Vector2 dir;
+    Transform pl_trans;
     Animator ani;
-    Transform player;
-    [SerializeField] float speed = 2f, radius = 5f; 
-    
+    [SerializeField] float move_speed;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindWithTag("Player").transform;
         ani = GetComponent<Animator>();
+
+        var player = GameObject.FindGameObjectWithTag("Player");
+
+        if (player == null)
+        {
+            player = FindObjectOfType<GameObject>();
+        }
+        else
+        {
+            pl_trans = player.transform;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (player == null)
+        if (pl_trans != null)
         {
-            return;
-        }
-
-        float distance = Vector2.Distance(transform.position, player.position);
-
-        if (distance < radius)
-        {
-            direction = (player.position - transform.position).normalized;
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-            ani.SetFloat("speed_", speed);
-        }
-        else if (distance > radius)
-        {
-            Destroy(gameObject, 1f);
+            dir = (pl_trans.position - transform.position).normalized;
+            transform.Translate(dir * move_speed * Time.deltaTime);
+            ani.SetFloat("speed_", move_speed);
         }
         else
         {
             ani.SetFloat("speed_", 0);
         }
 
-        if (direction != Vector2.zero)
+        if (dir != Vector2.zero)
         {
-            ani.SetFloat("x.velocity", direction.x);
-            ani.SetFloat("y.velocity", direction.y);
+            ani.SetFloat("x.velocity", dir.x);
+            ani.SetFloat("y.velocity", dir.y);
         }
-
-    }
-
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, radius);
     }
 }
 

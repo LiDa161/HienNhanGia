@@ -133,8 +133,7 @@ public class player_atk : MonoBehaviour
         }
         else
         {
-            return;
-            
+            return;           
         }
     }
 

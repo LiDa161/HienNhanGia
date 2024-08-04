@@ -16,13 +16,13 @@ public class quai_atk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.V))
+        /*if (Input.GetKeyDown(KeyCode.V))
         {
             fire();
-        }
+        }*/
     }
 
-    void fire()
+    public void fire()
     {
         Instantiate(bullet_ , fire_point.position, fire_point.rotation);
     }

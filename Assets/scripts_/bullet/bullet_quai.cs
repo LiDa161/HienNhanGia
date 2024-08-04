@@ -7,7 +7,6 @@ public class bullet_quai : MonoBehaviour
     GameObject player;
     Rigidbody2D rb;
     health health;
-    damage_text dmg;
     [SerializeField] float fire_force = 5f;
     [SerializeField] int min_damage, max_damage;
 
@@ -34,12 +33,10 @@ public class bullet_quai : MonoBehaviour
             var name = collision.attachedRigidbody.name;
             Destroy(gameObject);
             health = collision.GetComponent<health>();
-            dmg = collision.GetComponent<damage_text>();
             if (health != null)
             {
                 var damage = Random.Range(min_damage, max_damage);
                 health.tru_mau(damage);
-                dmg.set_text(damage);
                 if (health.current_health <= 0)
                 {
                     GameObject.Find(name).SetActive(false);
