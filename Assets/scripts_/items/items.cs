@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class items : MonoBehaviour
 {
-    player_atk player_Atk;
+    //player_atk player_Atk;
+    player_change_weapons player_Change;
     health Health;
     player_move player_Move;
     [SerializeField] int min_health, max_health;
@@ -14,10 +15,10 @@ public class items : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             print($"va cham voi : {collision}");
-            player_Atk = collision.GetComponentInChildren<player_atk>();
-            if (player_Atk != null)
+            player_Change = collision.GetComponentInChildren<player_change_weapons>();
+            if (player_Change != null)
             {
-                player_Atk.tang_toc_do_ban(0, 5f);
+                player_Change.tang_toc_do_ban(0, 5f);
             }
             Destroy(gameObject);
 

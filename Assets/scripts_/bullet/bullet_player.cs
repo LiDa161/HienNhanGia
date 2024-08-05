@@ -32,7 +32,7 @@ public class bullet_player : MonoBehaviour
             Destroy(gameObject);
             health = collision.GetComponent<health_quai>();
             if (health != null)
-            {               
+            {
                 var damage = Random.Range(min_damage, max_damage);
                 health.tru_mau(damage);
                 if (health.current_health <= 0)
