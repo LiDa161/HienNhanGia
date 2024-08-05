@@ -6,15 +6,14 @@ using UnityEngine;
 
 public class game_manager : MonoBehaviour
 {
-    int score_ = 0;
-    int Highscore = 0;
+    float score_ = 0, Highscore = 0;
     public static game_manager instance;
     public character[] characters;
     public character current_character;
 
     void Awake()
     {
-        Highscore = PlayerPrefs.GetInt("highscore");
+        Highscore = PlayerPrefs.GetFloat("highscore");
         Debug.Log(Highscore);
 
         if (instance == null)
@@ -44,13 +43,13 @@ public class game_manager : MonoBehaviour
         current_character = character;
     }
 
-    public void set_text(int count_)
+    public void set_text(float count_)
     {
         score_ += count_;
         if (score_ > Highscore)
         {
             Highscore = score_;
-            PlayerPrefs.SetInt("highscore", Highscore);
+            PlayerPrefs.SetFloat("highscore", Highscore);
             Debug.Log($"da luu : {Highscore} ");
         }
         UIManager.Instance.setText($"score : {score_}");

@@ -171,7 +171,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 171f198eba5267b4c8ab17ae1c40372a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quai_die: {fileID: 1113331014626018244, guid: 1c96db4492052f04c9652cd018563d37, type: 3}
+  drops:
+  - item: {fileID: 3206810623573722384, guid: 3e315a0e9d7984b4dbfc0f8e5013a797, type: 3}
+    name: health
+    icon: {fileID: -192693468, guid: e5ad112addec9d546acf68c80c5b68b7, type: 3}
+  - item: {fileID: 6694688477950369849, guid: 3011724c71c783a4e8143d9116d947d6, type: 3}
+    name: rate_fire
+    icon: {fileID: 811278209, guid: e5ad112addec9d546acf68c80c5b68b7, type: 3}
+  - item: {fileID: 2861505836288627972, guid: bb206fcf9ce107e43ac01abc0d6ff477, type: 3}
+    name: speed
+    icon: {fileID: 480156954, guid: e5ad112addec9d546acf68c80c5b68b7, type: 3}
   fire_force: 10
-  min_damage: 8
-  max_damage: 21
   count: 2

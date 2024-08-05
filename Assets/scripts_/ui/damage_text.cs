@@ -6,8 +6,8 @@ using UnityEngine;
 public class damage_text : MonoBehaviour
 {
     [SerializeField] GameObject prefab_popup;
-    //[SerializeField] int min, max;
     [SerializeField] Vector3 ofset = new Vector3(0, 1, 0), random = new Vector3(0.5f, 0, 0);
+
     // Start is called before the first frame update
     void Start()
     {

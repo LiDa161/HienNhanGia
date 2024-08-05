@@ -88,12 +88,5 @@ public class player_atk : MonoBehaviour
         {
             return;
         }
-    }
-
-    [System.Serializable]
-    public class Weapon
-    {
-        public GameObject weapon_opject;
-        public Sprite weapon_sprite;
-    }
+    }    
 }

@@ -9,6 +9,7 @@ public class player_change_weapons : MonoBehaviour
     [SerializeField] Transform fire_point;
     [SerializeField] bool can_fire = true;
     [SerializeField] float time_between, defaultTimeBetween;
+
     // Start is called before the first frame update
     void Start()
     {

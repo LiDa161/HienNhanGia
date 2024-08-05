@@ -7,6 +7,7 @@ public class bullet_quai : MonoBehaviour
     GameObject player;
     Rigidbody2D rb;
     health health;
+    [SerializeField] GameObject pl_die;
     [SerializeField] float fire_force = 5f;
     [SerializeField] int min_damage, max_damage;
 
@@ -36,10 +37,12 @@ public class bullet_quai : MonoBehaviour
             if (health != null)
             {
                 var damage = Random.Range(min_damage, max_damage);
-                health.tru_mau(damage);
+                health.tru_mau(damage);               
                 if (health.current_health <= 0)
                 {
                     GameObject.Find(name).SetActive(false);
+                    var die = Instantiate(pl_die, collision.transform.position, Quaternion.identity);
+                    Destroy(die, 0.5f);
                     Debug.Log($"da diet player");
                 }
             }

@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9d4e509cb927cd499a3c80a8dac8aa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pl_die: {fileID: 8679078651566081013, guid: 3b97f7ec3a1d3d84b90abbd74490aad4, type: 3}
   fire_force: 5
   min_damage: 5
   max_damage: 11
-  damage_text: {fileID: 4269216613586315643, guid: 80ff65b2c3389c349bd88fa3d0e3307c, type: 3}

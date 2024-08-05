@@ -22,7 +22,7 @@ public class health : MonoBehaviour
         update_health();
     }
 
-    private void Update()
+    void Update()
     {
         
     }

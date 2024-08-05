@@ -279,6 +279,7 @@ GameObject:
   - component: {fileID: 8699457108631493244}
   - component: {fileID: 7288002570390523825}
   - component: {fileID: 6274585096654009914}
+  - component: {fileID: 4313870724465407005}
   m_Layer: 0
   m_Name: gun_1
   m_TagString: 1
@@ -366,14 +367,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb9585f063da80c46ba0995bfcf21ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
   bullet: {fileID: 5325573346590834008, guid: 6ca5927af6c09b64ab53498d01ef11e1, type: 3}
   fire_point: {fileID: 5094793214391991582}
   can_fire: 1
   time_between: 0.5
   defaultTimeBetween: 0
-  min: 1
-  max: 7
+--- !u!114 &4313870724465407005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197955128599305657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 945414398e3a2cf48984dae172ba6d60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon_opject: {fileID: 1197955128599305657}
+  weapon_sprite: {fileID: -489677173, guid: 7f35d64412d549b4797a2a824a01eee3, type: 3}
+  min_damage: 5
+  max_damage: 11
 --- !u!1 &1783885580275383319
 GameObject:
   m_ObjectHideFlags: 0
@@ -875,12 +889,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapons:
-  - weapon_opject: {fileID: 1197955128599305657}
-    weapon_sprite: {fileID: -489677173, guid: 7f35d64412d549b4797a2a824a01eee3, type: 3}
-  - weapon_opject: {fileID: 8029896643658459651}
-    weapon_sprite: {fileID: 1986581099, guid: 7f35d64412d549b4797a2a824a01eee3, type: 3}
-  - weapon_opject: {fileID: 8580437509652702311}
-    weapon_sprite: {fileID: -1465075855, guid: 7f35d64412d549b4797a2a824a01eee3, type: 3}
+  - {fileID: 4313870724465407005}
+  - {fileID: 6286397203286801799}
+  - {fileID: 5689749685904232366}
 --- !u!1 &6452147327225942536
 GameObject:
   m_ObjectHideFlags: 0
@@ -1192,6 +1203,7 @@ GameObject:
   - component: {fileID: 6968769330714989709}
   - component: {fileID: 3385303295531362695}
   - component: {fileID: 3176775656910217659}
+  - component: {fileID: 6286397203286801799}
   m_Layer: 0
   m_Name: gun_2
   m_TagString: 2
@@ -1279,14 +1291,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb9585f063da80c46ba0995bfcf21ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
   bullet: {fileID: 5325573346590834008, guid: 6ca5927af6c09b64ab53498d01ef11e1, type: 3}
   fire_point: {fileID: 3785365096006510762}
   can_fire: 1
   time_between: 0
   defaultTimeBetween: 0
-  min: 2
-  max: 9
+--- !u!114 &6286397203286801799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8029896643658459651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 945414398e3a2cf48984dae172ba6d60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon_opject: {fileID: 8029896643658459651}
+  weapon_sprite: {fileID: 1986581099, guid: 7f35d64412d549b4797a2a824a01eee3, type: 3}
+  min_damage: 10
+  max_damage: 21
 --- !u!1 &8580437509652702311
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,6 +1323,7 @@ GameObject:
   - component: {fileID: 4772909850316709101}
   - component: {fileID: 7268487974995358189}
   - component: {fileID: 4073644983971130314}
+  - component: {fileID: 5689749685904232366}
   m_Layer: 0
   m_Name: gun_3
   m_TagString: 3
@@ -1385,11 +1411,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb9585f063da80c46ba0995bfcf21ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
   bullet: {fileID: 214456162257151439, guid: 9d8ada5d61590024784d8746480685cc, type: 3}
   fire_point: {fileID: 8594415706492562519}
   can_fire: 1
   time_between: 1
   defaultTimeBetween: 0
-  min: 20
-  max: 31
+--- !u!114 &5689749685904232366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8580437509652702311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 945414398e3a2cf48984dae172ba6d60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon_opject: {fileID: 8580437509652702311}
+  weapon_sprite: {fileID: -1465075855, guid: 7f35d64412d549b4797a2a824a01eee3, type: 3}
+  min_damage: 15
+  max_damage: 26
