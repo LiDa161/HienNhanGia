@@ -38,6 +38,7 @@ public class boss_move : MonoBehaviour
     void Update()
     {
         dir = (pl_trans.position - transform.position).normalized;
+
         ani.SetFloat("x.velocity", dir.x);
         ani.SetFloat("y.velocity", dir.y);
 
@@ -50,13 +51,6 @@ public class boss_move : MonoBehaviour
         {
             ani.SetFloat("speed_", 0);
         }
-
-
-        /*if (dir != Vector2.zero)
-        {
-            ani.SetFloat("x.velocity", dir.x);
-            ani.SetFloat("y.velocity", dir.y);
-        }*/
 
         if (is_atk)
         {
@@ -81,14 +75,6 @@ public class boss_move : MonoBehaviour
         }
     }
 
-    void move_player()
-    {
-        //var direction = player.transform.position - transform.position;
-
-        var angle = Mathf.Atan2(player_Move.move_.y, player_Move.move_.x) * Mathf.Rad2Deg;
-        //transform.rotation = Quaternion.Euler(0, 0, angle);
-    }
-
     IEnumerator DelayForAttack()
     {
         yield return new WaitForSeconds(2f);
@@ -101,56 +87,5 @@ public class boss_move : MonoBehaviour
         {
             is_atk = false;
         }
-    }
-    /*Vector2 direction;
-    Animator ani;
-    Transform player;
-    [SerializeField] float speed = 2f, radius = 5f;
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        player = GameObject.FindWithTag("Player").transform;
-        ani = GetComponent<Animator>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (player == null)
-        {
-            return;
-        }
-
-        float distance = Vector2.Distance(transform.position, player.position);
-
-        if (distance < radius)
-        {
-            direction = (player.position - transform.position).normalized;
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-            ani.SetFloat("speed_", speed);
-        }
-        else if (distance > radius)
-        {
-            Destroy(gameObject, 1f);
-        }
-        else
-        {
-            ani.SetFloat("speed_", 0);
-        }
-
-        if (direction != Vector2.zero)
-        {
-            ani.SetFloat("x.velocity", direction.x);
-            ani.SetFloat("y.velocity", direction.y);
-        }
-
-    }
-
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, radius);
-    }*/
+    }   
 }

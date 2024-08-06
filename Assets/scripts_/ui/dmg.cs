@@ -32,7 +32,9 @@ public class dmg : MonoBehaviour
 
     public void random_dmg_text(int dmg__, Transform trans)
     {
-        var random_pos = trans.position + new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(0.5f, 1f), 0);
+        var pos_x = Random.Range(-0.5f, 0.5f);
+        var pos_y = Random.Range(0.5f, 1f);
+        var random_pos = trans.position + new Vector3(pos_x, pos_y, 0);
         Show(dmg__, random_pos);
     }
 

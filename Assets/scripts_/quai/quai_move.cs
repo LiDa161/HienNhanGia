@@ -29,21 +29,19 @@ public class quai_move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        dir = (pl_trans.position - transform.position).normalized;
+
+        ani.SetFloat("x.velocity", dir.x);
+        ani.SetFloat("y.velocity", dir.y);
+
         if (pl_trans != null)
         {
-            dir = (pl_trans.position - transform.position).normalized;
             transform.Translate(dir * move_speed * Time.deltaTime);
             ani.SetFloat("speed_", move_speed);
         }
         else
         {
             ani.SetFloat("speed_", 0);
-        }
-
-        if (dir != Vector2.zero)
-        {
-            ani.SetFloat("x.velocity", dir.x);
-            ani.SetFloat("y.velocity", dir.y);
         }
     }
 }

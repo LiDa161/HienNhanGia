@@ -7,8 +7,8 @@ public class quai_collision : MonoBehaviour
 {
     health health_;
     [SerializeField] int min, max;
-    
-    void OnCollisionStay2D(Collision2D collision)
+
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
