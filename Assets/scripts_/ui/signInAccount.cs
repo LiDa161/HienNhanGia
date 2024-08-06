@@ -52,4 +52,9 @@ public class signInAccount : MonoBehaviour
             }
         }
     }
+
+    public void SignInBackToMenu(string name)
+    {
+        SceneManager.LoadSceneAsync(name);
+    }
 }

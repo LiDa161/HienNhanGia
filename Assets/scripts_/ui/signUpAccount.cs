@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 
 public class signUpAccount : MonoBehaviour
@@ -40,5 +41,10 @@ public class signUpAccount : MonoBehaviour
                 default: thongbao.text = "Không kết nối được tới sever"; break;
             }
         }
+    }
+
+    public void SignUpBackToMenu(string name)
+    {
+        SceneManager.LoadSceneAsync(name);
     }
 }

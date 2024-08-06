@@ -14,4 +14,14 @@ public class mainMenu : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void SignUpButtonOption(string name)
+    {
+        SceneManager.LoadSceneAsync(name);
+    }
+
+    public void SignInButtonOption(string name)
+    {
+        SceneManager.LoadSceneAsync(name);
+    }
 }
