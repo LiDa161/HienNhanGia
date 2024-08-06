@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class quai_collision : MonoBehaviour
 {
     health health_;
     [SerializeField] int min, max;
-
-    void OnCollisionEnter2D(Collision2D collision)
+    
+    void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
