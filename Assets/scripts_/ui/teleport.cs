@@ -16,7 +16,7 @@ public class teleport : MonoBehaviour
             ani = collision.GetComponent<Animator>();
             if (Vector2.Distance(collision.transform.position, transform.position) > 0.3f)
             {
-                StartCoroutine(port(collision));
+                StartCoroutine(delay(collision));
             }
         }        
     }
@@ -32,4 +32,10 @@ public class teleport : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         ani.Play("movement_");
     }   
+
+    IEnumerator delay(Collider2D coll)
+    {
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(port(coll));
+    }
 }

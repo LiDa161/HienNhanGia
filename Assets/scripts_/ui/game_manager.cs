@@ -31,14 +31,14 @@ public class game_manager : MonoBehaviour
 
     void Start()
     {
+        play_music("bg");
+
         if (characters.Length > 0)
         {
             current_character = characters[0];
         }
 
         UIManager.Instance.setText($"score : {score_}");
-
-        play_music("bg");
     }
 
     public void SetCharacter(character character)

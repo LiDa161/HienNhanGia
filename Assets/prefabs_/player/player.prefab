@@ -388,6 +388,7 @@ MonoBehaviour:
   weapon_sprite: {fileID: -489677173, guid: 7f35d64412d549b4797a2a824a01eee3, type: 3}
   min_damage: 5
   max_damage: 11
+  clips: {fileID: 8300000, guid: 0bddcb411d826e14bb26d40ae45d8e22, type: 3}
 --- !u!1 &1783885580275383319
 GameObject:
   m_ObjectHideFlags: 0
@@ -1291,7 +1292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb9585f063da80c46ba0995bfcf21ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 5325573346590834008, guid: 6ca5927af6c09b64ab53498d01ef11e1, type: 3}
+  bullet: {fileID: 691447051278066499, guid: 28a72a7ea2eb0244998031e9489a31a7, type: 3}
   fire_point: {fileID: 3785365096006510762}
   can_fire: 1
   time_between: 0
@@ -1312,6 +1313,7 @@ MonoBehaviour:
   weapon_sprite: {fileID: 1986581099, guid: 7f35d64412d549b4797a2a824a01eee3, type: 3}
   min_damage: 10
   max_damage: 21
+  clips: {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}
 --- !u!1 &8580437509652702311
 GameObject:
   m_ObjectHideFlags: 0
@@ -1432,3 +1434,4 @@ MonoBehaviour:
   weapon_sprite: {fileID: -1465075855, guid: 7f35d64412d549b4797a2a824a01eee3, type: 3}
   min_damage: 15
   max_damage: 26
+  clips: {fileID: 8300000, guid: e9bc800cb24ffc845bcc77c49ab64d31, type: 3}

@@ -12,10 +12,10 @@ public class dmg : MonoBehaviour
     {
         instance = this;
 
-        foreach (Transform dmg in transform)
-        {
-            showDmg.Add(dmg.GetComponent<show_dmg>());
-        }
+        //foreach (Transform dmg in transform)
+        //{
+        //    showDmg.Add(dmg.GetComponent<show_dmg>());
+        //}
     }
 
     public void Show(int dmg, Vector3 pos)

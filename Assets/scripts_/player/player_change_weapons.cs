@@ -39,6 +39,7 @@ public class player_change_weapons : MonoBehaviour
     void fire()
     {
         var bullet_speed = Instantiate(bullet, fire_point.position, fire_point.rotation);
+        game_manager.instance.play_sfx("gun_1");
     }
 
     public void tang_toc_do_ban(int sp, float x)
