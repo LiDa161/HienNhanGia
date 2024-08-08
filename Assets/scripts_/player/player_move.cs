@@ -40,6 +40,7 @@ public class player_move : MonoBehaviour
             dash_time_ = dash_time;
             is_dashing = true;
             start_ghost();
+            game_manager.instance.play_sfx("dash");
         }
         
         if (dash_time_ <= 0 && is_dashing == true)

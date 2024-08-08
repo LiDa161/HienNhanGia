@@ -31,6 +31,7 @@ public class bullet_quai : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            game_manager.instance.play_sfx("collision");
             var name = collision.attachedRigidbody.name;
             Destroy(gameObject);
             health = collision.GetComponent<health>();
@@ -40,6 +41,9 @@ public class bullet_quai : MonoBehaviour
                 health.tru_mau(damage);               
                 if (health.current_health <= 0)
                 {
+                    game_manager.instance.play_sfx("die");
+                    game_manager.instance.music_source.Stop();
+
                     GameObject.Find(name).SetActive(false);
                     var die = Instantiate(pl_die, collision.transform.position, Quaternion.identity);
                     Destroy(die, 0.5f);

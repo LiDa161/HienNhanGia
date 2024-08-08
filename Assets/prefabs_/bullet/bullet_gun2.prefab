@@ -168,11 +168,14 @@ MonoBehaviour:
     name: health
     icon: {fileID: -594782117, guid: f604fa06c95511e47b70b0cba9f6443f, type: 3}
   - item: {fileID: 6694688477950369849, guid: 3011724c71c783a4e8143d9116d947d6, type: 3}
-    name: fire_rate
+    name: rate_fire
     icon: {fileID: -1612167158, guid: f604fa06c95511e47b70b0cba9f6443f, type: 3}
   - item: {fileID: 2861505836288627972, guid: bb206fcf9ce107e43ac01abc0d6ff477, type: 3}
     name: speed
     icon: {fileID: -325131188, guid: f604fa06c95511e47b70b0cba9f6443f, type: 3}
+  - item: {fileID: 4514252931193126524, guid: c6cc87dc51e14334da5d5e0261afb1e0, type: 3}
+    name: mystery_box
+    icon: {fileID: -1978815842, guid: f604fa06c95511e47b70b0cba9f6443f, type: 3}
   fire_force: 10
   count: 2
 --- !u!95 &464740924583230886

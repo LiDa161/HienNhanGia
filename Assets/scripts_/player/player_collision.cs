@@ -24,8 +24,9 @@ public class player_collision : MonoBehaviour
     {
         if (collision.CompareTag("up_rate_fire"))
         {
+            game_manager.instance.play_sfx("rate_fire");
             if (player_Change != null)
-            {
+            {                
                 player_Change.tang_toc_do_ban(0, 5f);
             }
             Destroy(collision.gameObject);
@@ -33,6 +34,7 @@ public class player_collision : MonoBehaviour
 
         if (collision.CompareTag("up_health"))
         {
+            game_manager.instance.play_sfx("health");
             if (Health != null)
             {
                 var healing = Random.Range(min_health, max_health);
@@ -43,6 +45,7 @@ public class player_collision : MonoBehaviour
 
         if (collision.CompareTag("up_speed"))
         {
+            game_manager.instance.play_sfx("speed");
             if (player_Move != null)
             {
                 player_Move.tang_speed(16, 3);
@@ -52,6 +55,7 @@ public class player_collision : MonoBehaviour
 
         if (collision.CompareTag("hop_bi_an"))
         {
+            game_manager.instance.play_sfx("mystery_box");
             player_Atk.random_weapon();
             collision.gameObject.SetActive(false);
         }

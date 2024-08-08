@@ -31,6 +31,7 @@ public class bullet_player : MonoBehaviour
     {
         if (collision.CompareTag("quai"))
         {
+            game_manager.instance.play_sfx("collision");
             var name = collision.attachedRigidbody.name;
             Destroy(gameObject);
             health = collision.GetComponent<health_quai>();
@@ -41,7 +42,8 @@ public class bullet_player : MonoBehaviour
                 dmg.instance.random_dmg_text(damage, collision.transform);
 
                 if (health.current_health <= 0)
-                {                   
+                {
+                    game_manager.instance.play_sfx("lv_up");
                     game_manager.instance.set_text(count);
                     GameObject.Find(name).SetActive(false);
 
@@ -58,6 +60,5 @@ public class bullet_player : MonoBehaviour
     {
         var random_item = Random.Range(0, drops.Count);
         Instantiate(drops[random_item].item, pos, Quaternion.identity);
-    }
-
+    }   
 }

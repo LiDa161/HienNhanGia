@@ -12,12 +12,14 @@ public class quai_collision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            game_manager.instance.play_sfx("collision");
             health_ = collision.gameObject.GetComponent<health>();
             var damage = Random.Range(min, max);
             health_.tru_mau(damage);
 
             if(health_.current_health <= 0)
             {
+                game_manager.instance.play_sfx("die");
                 collision.gameObject.SetActive(false);
             }
         }
