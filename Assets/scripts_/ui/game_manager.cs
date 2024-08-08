@@ -6,7 +6,9 @@ using UnityEngine;
 
 public class game_manager : MonoBehaviour
 {
-    float score_ = 0, Highscore = 0;
+    bool is_gameover;
+    public int score, high_score;
+    public GameObject game_over, score_object;
     public static game_manager instance;
     public character[] characters;
     public sounds[] music, sfx;
@@ -15,7 +17,7 @@ public class game_manager : MonoBehaviour
 
     void Awake()
     {
-        Highscore = PlayerPrefs.GetFloat("highscore");
+        high_score = PlayerPrefs.GetInt("highscore");
 
         if (instance == null)
         {
@@ -37,8 +39,14 @@ public class game_manager : MonoBehaviour
         {
             current_character = characters[0];
         }
+    }
 
-        UIManager.Instance.setText($"score : {score_}");
+    void Update()
+    {
+        if (is_gameover)
+        {
+            player_die();
+        }
     }
 
     public void SetCharacter(character character)
@@ -46,15 +54,39 @@ public class game_manager : MonoBehaviour
         current_character = character;
     }
 
-    public void set_text(float count_)
+    public void add_score(int score_value)
     {
-        score_ += count_;
-        if (score_ > Highscore)
+        score += score_value;
+        if (score > high_score)
         {
-            Highscore = score_;
-            PlayerPrefs.SetFloat("highscore", Highscore);
+            high_score = score;
+            PlayerPrefs.SetInt("highscore", high_score);
         }
-        UIManager.Instance.setText($"score : {score_}");
+    }
+
+    public int get_score()
+    {
+        return score;
+    }
+
+    public int get_high_score()
+    {
+        return high_score;
+    }
+
+    public void kill_player()
+    {
+        is_gameover = true;
+    }
+
+    public void player_die()
+    {
+        game_over.SetActive(true);
+    }
+
+    public bool gameover_()
+    {
+        return is_gameover;
     }
 
     public void play_music(string name)

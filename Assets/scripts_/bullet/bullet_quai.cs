@@ -42,9 +42,9 @@ public class bullet_quai : MonoBehaviour
                 if (health.current_health <= 0)
                 {
                     game_manager.instance.play_sfx("die");
-                    //game_manager.instance.music_source.Stop();
-
+                    game_manager.instance.kill_player();
                     GameObject.Find(name).SetActive(false);
+
                     var die = Instantiate(pl_die, collision.transform.position, Quaternion.identity);
                     Destroy(die, 0.5f);
                 }

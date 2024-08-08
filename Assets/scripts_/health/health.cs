@@ -31,7 +31,7 @@ public class health : MonoBehaviour
     {
         float health_bar = current_health / max_health;
         health_.DOFillAmount(health_bar, fill_speed);
-        value_text.text = $"{current_health.ToString()} / {max_health.ToString()}";
+        value_text.text = $"{current_health} / {max_health}";
     }
 
     public void tru_mau(int tru_mau)

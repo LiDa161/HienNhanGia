@@ -9,7 +9,7 @@ public class bullet_player : MonoBehaviour
     Weapon weapon;
     [SerializeField] GameObject quai_die;
     [SerializeField] List<quai_drop> drops;
-    [SerializeField] float fire_force, count;
+    [SerializeField] int fire_force, count;
 
     // Start is called before the first frame update
     void Start()
@@ -43,8 +43,8 @@ public class bullet_player : MonoBehaviour
 
                 if (health.current_health <= 0)
                 {
+                    game_manager.instance.add_score(count);
                     game_manager.instance.play_sfx("lv_up");
-                    game_manager.instance.set_text(count);
                     GameObject.Find(name).SetActive(false);
 
                     var die = Instantiate(quai_die, collision.transform.position, Quaternion.identity);
