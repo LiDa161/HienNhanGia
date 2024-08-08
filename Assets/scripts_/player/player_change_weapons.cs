@@ -53,6 +53,5 @@ public class player_change_weapons : MonoBehaviour
     {
         yield return new WaitForSeconds(timez);
         time_between = defaultTimeBetween;
-        print("het time");
     }   
 }

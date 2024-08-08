@@ -25,15 +25,15 @@ public class player_move : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
         sp = GetComponent<SpriteRenderer>();
-        /*Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;*/
     }
 
     // Update is called once per frame
     void Update()
     {
         player_ani();
+
         speed = Math.Clamp(move_.magnitude, 0.0f, 1.0f);  
+
         if (Input.GetKeyDown(KeyCode.Space) && dash_time_ <= 0 && is_dashing == false)
         {
             speed_basic += dash_boost;
@@ -103,6 +103,7 @@ public class player_move : MonoBehaviour
             {
                 ghost_dash.transform.localScale = new Vector3(1, 1, 1);
             }
+
             var ghost = Instantiate(ghost_dash, transform.position, transform.rotation);
             Sprite current_sp = sp.sprite;
             ghost.GetComponent<SpriteRenderer>().sprite = current_sp;
@@ -114,7 +115,6 @@ public class player_move : MonoBehaviour
 
     public void tang_speed(float sp, float time_)
     {
-        Debug.Log($"tang speed tu : {speed_basic} len {sp} trong {time_}s");
         default_speed = speed_basic;
         speed_basic = sp;
         time = time_;
@@ -125,7 +125,6 @@ public class player_move : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         speed_basic = default_speed;
-        print("het time");
     }
 }
 

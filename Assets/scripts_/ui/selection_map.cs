@@ -7,6 +7,9 @@ using UnityEngine.UI;
 
 public class selection_map : MonoBehaviour, IEndDragHandler
 {
+    int current_map_sl;
+    Vector3 target_pos;
+    float drag;
     [SerializeField] int max_map;
     [SerializeField] Vector3 next_map;
     [SerializeField] RectTransform map_rect;
@@ -16,13 +19,9 @@ public class selection_map : MonoBehaviour, IEndDragHandler
     [SerializeField] Sprite closed, open;
     [SerializeField] Button next_btton, previous_button;
     [SerializeField] List<Button> buttons;
-    int current_map_sl;
-    Vector3 target_pos;
-    float drag;
 
     void Awake()
     {
-        //PlayerPrefs.DeleteAll();
         update_map();
     }
 

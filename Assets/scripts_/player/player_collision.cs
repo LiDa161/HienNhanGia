@@ -24,7 +24,6 @@ public class player_collision : MonoBehaviour
     {
         if (collision.CompareTag("up_rate_fire"))
         {
-            print($"va cham voi : {collision.name}");
             if (player_Change != null)
             {
                 player_Change.tang_toc_do_ban(0, 5f);
@@ -34,7 +33,6 @@ public class player_collision : MonoBehaviour
 
         if (collision.CompareTag("up_health"))
         {
-            print($"va cham voi : {collision.name}");
             if (Health != null)
             {
                 var healing = Random.Range(min_health, max_health);
@@ -45,7 +43,6 @@ public class player_collision : MonoBehaviour
 
         if (collision.CompareTag("up_speed"))
         {
-            print($"va cham voi : {collision.name}");
             if (player_Move != null)
             {
                 player_Move.tang_speed(16, 3);
@@ -55,7 +52,6 @@ public class player_collision : MonoBehaviour
 
         if (collision.CompareTag("hop_bi_an"))
         {
-            print($"va cham voi : {collision.name}");
             player_Atk.random_weapon();
             collision.gameObject.SetActive(false);
         }

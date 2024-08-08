@@ -14,7 +14,6 @@ public class game_manager : MonoBehaviour
     void Awake()
     {
         Highscore = PlayerPrefs.GetFloat("highscore");
-        Debug.Log(Highscore);
 
         if (instance == null)
         {
@@ -50,7 +49,6 @@ public class game_manager : MonoBehaviour
         {
             Highscore = score_;
             PlayerPrefs.SetFloat("highscore", Highscore);
-            Debug.Log($"da luu : {Highscore} ");
         }
         UIManager.Instance.setText($"score : {score_}");
     }

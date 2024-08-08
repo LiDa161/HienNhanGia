@@ -43,7 +43,6 @@ public class bullet_quai : MonoBehaviour
                     GameObject.Find(name).SetActive(false);
                     var die = Instantiate(pl_die, collision.transform.position, Quaternion.identity);
                     Destroy(die, 0.5f);
-                    Debug.Log($"da diet player");
                 }
             }
         }

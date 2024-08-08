@@ -19,7 +19,6 @@ public class quai_collision : MonoBehaviour
             if(health_.current_health <= 0)
             {
                 collision.gameObject.SetActive(false);
-                print("player die");
             }
         }
     }

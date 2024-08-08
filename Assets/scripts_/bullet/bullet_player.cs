@@ -39,6 +39,7 @@ public class bullet_player : MonoBehaviour
                 var damage = weapon.take_damage();
                 health.tru_mau(damage);
                 dmg.instance.random_dmg_text(damage, collision.transform);
+
                 if (health.current_health <= 0)
                 {                   
                     game_manager.instance.set_text(count);
@@ -48,7 +49,6 @@ public class bullet_player : MonoBehaviour
                     Destroy(die, 0.5f);
 
                     drop_item(collision.transform.position);
-                    Debug.Log($"da diet quai");
                 }
             }                        
         }

@@ -73,16 +73,14 @@ public class player_atk : MonoBehaviour
 
         if (current_weapon == random_weapons)
         {
-            print($"dang la vu khi : {current_weapon.weapon_opject.name}");
+            return;
         }
         else if (current_weapon != null)
         {
             SetWeaponActive(current_weapon, false);
-            print($"da an vu khi : {current_weapon.weapon_opject.name}");
 
             current_weapon = random_weapons;
             SetWeaponActive(current_weapon, true);
-            print($"vu khi : {random_weapons.weapon_opject.name} active");
         }
         else
         {
