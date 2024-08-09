@@ -29,6 +29,7 @@ public class quai_move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         dir = (pl_trans.position - transform.position).normalized;
 
         ani.SetFloat("x.velocity", dir.x);

@@ -17,6 +17,7 @@ TagManager:
   - 2
   - 3
   - hop_bi_an
+  - game_over
   layers:
   - Default
   - TransparentFX

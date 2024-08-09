@@ -9,7 +9,6 @@ public class boss_move : MonoBehaviour
     Animator ani;
     quai_atk quai_Atk;
     float distance;
-    GameObject player;
     player_move player_Move;
     [SerializeField] float move_speed, radius;
     [SerializeField] bool is_atk;
@@ -21,7 +20,7 @@ public class boss_move : MonoBehaviour
         quai_Atk = GetComponentInChildren<quai_atk>();
         ani = GetComponent<Animator>();
 
-        player = GameObject.FindGameObjectWithTag("Player");
+        var player = GameObject.FindGameObjectWithTag("Player");
         player_Move = FindObjectOfType<player_move>();
 
         if (player == null)
