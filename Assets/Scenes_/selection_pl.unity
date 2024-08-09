@@ -610,6 +610,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84a69058fca417646ae5eb8be9fb0380, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
+  high_score: 0
+  game_over: {fileID: 0}
+  score_object: {fileID: 0}
   characters:
   - prefab: {fileID: 738293081360093442, guid: 86c4906a6b0f9c24b89388d1ed30014a, type: 3}
     name: player 1
@@ -617,10 +621,14 @@ MonoBehaviour:
   - prefab: {fileID: 787835606871189544, guid: b11de68a3c4719745a412ceafcc5c46d, type: 3}
     name: player 2
     icon: {fileID: 21300000, guid: 8a588326e5bd0c349a7eb319617445cd, type: 3}
+  music: []
+  sfx: []
   current_character:
     prefab: {fileID: 0}
     name: 
     icon: {fileID: 0}
+  music_source: {fileID: 0}
+  sfx_source: {fileID: 0}
 --- !u!4 &1918352808
 Transform:
   m_ObjectHideFlags: 0
@@ -649,7 +657,7 @@ GameObject:
   - component: {fileID: 1967034877}
   - component: {fileID: 1967034876}
   m_Layer: 5
-  m_Name: star
+  m_Name: start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -671,8 +679,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 180, y: 50}
+  m_AnchoredPosition: {x: -25, y: -25}
+  m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1967034876
 MonoBehaviour:
@@ -693,7 +701,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -704,9 +712,9 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 1962851988, guid: 52ceea8509b74aa4fb4bc834dd858657, type: 3}
+    m_SelectedSprite: {fileID: 75034931, guid: 52ceea8509b74aa4fb4bc834dd858657, type: 3}
+    m_DisabledSprite: {fileID: 628207634, guid: 52ceea8509b74aa4fb4bc834dd858657, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -750,7 +758,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 349494456, guid: 6391ca2c383c47f44af35ccdff5ed53b, type: 3}
+  m_Sprite: {fileID: 628207634, guid: 52ceea8509b74aa4fb4bc834dd858657, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
