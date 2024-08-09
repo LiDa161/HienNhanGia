@@ -17,6 +17,11 @@ public class insertScore : MonoBehaviour
         StartCoroutine(InsertScore());
     }
 
+    public void BackButton(string name)
+    {
+        SceneManager.LoadSceneAsync(name);
+    }
+
     IEnumerator InsertScore()
     {
         WWWForm form = new WWWForm();

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class signUpAccount : MonoBehaviour
 {
@@ -13,6 +14,11 @@ public class signUpAccount : MonoBehaviour
     public void DangKyButton()
     {
         StartCoroutine(DangKy());
+    }
+
+    public void BackButton(string name)
+    {
+        SceneManager.LoadSceneAsync(name);
     }
 
     IEnumerator DangKy()

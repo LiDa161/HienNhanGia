@@ -16,6 +16,11 @@ public class signInAccount : MonoBehaviour
         StartCoroutine(DangNhap());
     }
 
+    public void BackButton(string name)
+    {
+        SceneManager.LoadSceneAsync(name);
+    }
+
     IEnumerator DangNhap()
     {
         WWWForm form = new WWWForm();

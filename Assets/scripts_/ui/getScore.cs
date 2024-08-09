@@ -15,6 +15,11 @@ public class getScore : MonoBehaviour
         StartCoroutine(GetScore());
     }
 
+    public void BackButton(string name)
+    {
+        SceneManager.LoadSceneAsync(name);
+    }
+
     IEnumerator GetScore()
     {
         WWWForm form = new WWWForm();
