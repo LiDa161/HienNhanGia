@@ -22,7 +22,7 @@ public class health : MonoBehaviour
         update_health();
     }
 
-    private void Update()
+    void Update()
     {
         
     }
@@ -31,15 +31,13 @@ public class health : MonoBehaviour
     {
         float health_bar = current_health / max_health;
         health_.DOFillAmount(health_bar, fill_speed);
-        value_text.text = $"{current_health.ToString()} / {max_health.ToString()}";
+        value_text.text = $"{current_health} / {max_health}";
     }
 
     public void tru_mau(int tru_mau)
     {               
         current_health -= tru_mau;
         current_health = Mathf.Clamp(current_health, 0f, max_health);
-        Debug.Log($"-{tru_mau}hp");
-        Debug.Log($"con lai : {current_health}hp");
         update_health();
     }
     
@@ -47,8 +45,6 @@ public class health : MonoBehaviour
     {
         current_health += tang_mau;
         current_health = Mathf.Clamp(current_health, 0f, max_health);
-        Debug.Log($"+{tang_mau}hp");
-        Debug.Log($"hp moi : {current_health}");
         update_health();
     }
   

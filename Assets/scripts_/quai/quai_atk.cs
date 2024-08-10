@@ -16,10 +16,7 @@ public class quai_atk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (Input.GetKeyDown(KeyCode.V))
-        {
-            fire();
-        }*/
+
     }
 
     public void fire()

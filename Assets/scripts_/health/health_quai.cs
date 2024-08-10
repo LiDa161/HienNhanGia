@@ -17,7 +17,5 @@ public class health_quai : MonoBehaviour
     {
         current_health -= tru_mau;
         current_health = Mathf.Clamp(current_health, 0f, max_health);
-        Debug.Log($"-{tru_mau}hp");
-        Debug.Log($"hp con lai : {current_health}");
     }
 }
